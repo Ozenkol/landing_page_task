@@ -12,6 +12,5 @@
       "@assets/*": ["src/assets/*"],
       "@ui/*": ["src/ui/*"]
     }
-  },
-  "include": ["src"]
+  }
 }
