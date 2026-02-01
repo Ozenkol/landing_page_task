@@ -12,7 +12,7 @@ const GalleryWidget = () => {
           <div className="row-span-5">
             <Image
               src={firstPic}
-              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110 rounded-[40px] p-1"
+              className="w-full min-h-100 max-h-100 object-cover transition-transform duration-300 hover:scale-110 rounded-[40px] p-1"
               alt="Gallery Widget"
             />
           </div>
@@ -20,7 +20,7 @@ const GalleryWidget = () => {
             <Card className="rounded-[40px] bg-yellow-300 p-2">
               <Image
                 src={secondPic}
-                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110 rounded-[20px]"
+                className="w-full min-h-100 max-h-100 object-cover transition-transform duration-300 hover:scale-110 rounded-[20px]"
                 alt="Gallery Widget"
               />
             </Card>

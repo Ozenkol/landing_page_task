@@ -52,17 +52,17 @@ const SixthPage = () => {
   }, []);
   return (
     <section className="w-full">
-      <div className="max-w-7xl mx-auto w-full px-3 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-screen mx-0 w-full px-0 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
         <Image
           src={bagPic}
-          className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
+          className="w-full md:w-1/2 min-h-[80vh] max-h-[80vh] rounded-[20px] object-cover"
           alt="Sixth Page Bag"
           ref={firstPic}
         />
 
         <Image
           src={signPic}
-          className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
+          className="w-full md:w-1/2 min-h-[80vh] max-h-[80vh] rounded-[20px] object-fit"
           alt="Sixth Page Foreground"
           ref={secondPic}
         />

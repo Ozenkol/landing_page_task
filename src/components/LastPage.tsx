@@ -31,7 +31,7 @@ const LastPage = () => {
   }, []);
   return (
     <section className="w-full">
-      <div className="max-w-7xl mx-auto w-full px-3 py-8">
+      <div className="max-w-screen mx-auto w-full p-0">
         <Image
           src={storePic}
           alt={"Last Page Image"}

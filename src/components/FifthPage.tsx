@@ -33,7 +33,7 @@ const FifthPage = () => {
   });
   return (
     <section className="w-full">
-      <div ref={el} className="max-w-7xl mx-auto w-full px-3 py-8">
+      <div ref={el} className="max-w-screen mx-0 w-full">
         <Image
           src={vines}
           alt={"Vines Image"}

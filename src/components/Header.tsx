@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { motion } from "framer-motion";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const language = "Рус";
