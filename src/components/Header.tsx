@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 
-import { motion, useAnimation } from "framer-motion";
-
-import { useInView } from "react-intersection-observer";
-
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState("Рус");
+  const language = "Рус";
 
   const navItems = ["О нас", "Услуги", "Проекты", "Шоу кейсы"];
 
   return (
-    <motion.header className="flex items-center justify-between bg-[#FFFCF0] rounded-[40px] p-[16px_20px] m-2">
-      <div className="flex items-center justify-between w-full">
+    <header className="bg-[#FFFCF0] rounded-[40px]">
+      <div className="max-w-7xl mx-auto w-full px-3 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-900">CIRCLE</div>
 
@@ -54,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* Contact Button */}
-          <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
+          <button className="hidden md:block bg-[#FA4C19] hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
             Связаться с нами
           </button>
 
@@ -113,7 +109,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </motion.header>
+    </header>
   );
 };
 

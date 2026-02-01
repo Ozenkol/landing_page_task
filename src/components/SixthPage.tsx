@@ -51,21 +51,23 @@ const SixthPage = () => {
       );
   }, []);
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-12">
-      <Image
-        src={bagPic}
-        className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
-        alt="Sixth Page Bag"
-        ref={firstPic}
-      />
+    <section className="w-full">
+      <div className="max-w-7xl mx-auto w-full px-3 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
+        <Image
+          src={bagPic}
+          className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
+          alt="Sixth Page Bag"
+          ref={firstPic}
+        />
 
-      <Image
-        src={signPic}
-        className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
-        alt="Sixth Page Foreground"
-        ref={secondPic}
-      />
-    </div>
+        <Image
+          src={signPic}
+          className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
+          alt="Sixth Page Foreground"
+          ref={secondPic}
+        />
+      </div>
+    </section>
   );
 };
 

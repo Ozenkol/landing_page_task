@@ -36,7 +36,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     return (
       <div
         ref={ref || elementRef}
-        className={`relative bg-transparent rounded-[20px] border border-white shadow-[0px_4px_140.7px_0px_#C0C7F7] backdrop-blur-0 py-6 md:py-[60px] px-4 md:px-[24px] ${className}`}
+        className={`relative bg-transparent rounded-[20px] border border-white shadow-[0px_4px_140.7px_0px_#C0C7F7] backdrop-blur-0 py-4 md:py-[40px] px-3 md:px-[20px] ${className}`}
         {...props}
       >
         {children}

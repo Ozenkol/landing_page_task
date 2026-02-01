@@ -31,16 +31,16 @@ export default function FirstPage({ children }: FirstPageProps) {
   });
 
   return (
-    <div className="relative w-full min-h-screen bg-[#FAF100] flex flex-col rounded-b-[48px]">
-      <div className="p-4 md:p-6">{children}</div>
-      <div className="flex-1 flex items-center justify-center px-4">
+    <section className="relative w-full min-h-screen bg-[#FAF100] flex flex-col rounded-b-[48px]">
+      <div className="max-w-screen mx-0 px-3 py-4 md:py-10">{children}</div>
+      <div className="flex-1 flex items-center justify-center px-3 py-6">
         <img
           ref={el}
           src={steppeCoffeeImage}
           alt="Steppe Coffee"
-          className="w-full h-auto max-w-[320px] md:max-w-[520px] lg:max-w-[720px]"
+          className="w-full h-auto max-w-[320px] sm:max-w-[420px] md:max-w-[640px] lg:max-w-[840px]"
         />
       </div>
-    </div>
+    </section>
   );
 }

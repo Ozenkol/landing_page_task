@@ -1,11 +1,10 @@
 import React from "react";
 import Paragraph from "../ui/Paragraph";
-import Heading from "../ui/Heading";
 
 const Footer = () => {
   return (
     <footer className="bg-[#AC8EEF] text-[#000000]">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-3 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column: Brand & Description */}
           <div className="space-y-6">

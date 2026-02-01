@@ -49,30 +49,32 @@ const ThirdPage = () => {
       );
   }, []);
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen mx-auto gap-8 md:gap-20 px-6 md:px-16">
-      <div
-        className="w-full md:w-auto flex flex-col justify-center items-center"
-        ref={beforeRef}
-      >
-        <Heading type="h2" className="mb-4">
-          ДО
-        </Heading>
-        <Card className="w-full md:w-auto">
-          <Image src={before} alt={"Our Mission Image"}></Image>
-        </Card>
+    <section className="w-full mx-0">
+      <div className="max-w-8xl mx-auto w-full px-3 py-8 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20">
+        <div
+          className="w-full md:w-1/2 flex flex-col justify-center items-center"
+          ref={beforeRef}
+        >
+          <Heading type="h2" className="mb-4">
+            ДО
+          </Heading>
+          <Card className="w-full">
+            <Image src={before} alt={"Our Mission Image"} />
+          </Card>
+        </div>
+        <div
+          className="w-full md:w-1/2 flex flex-col justify-center items-center"
+          ref={afterRef}
+        >
+          <Heading type="h2" className="mb-4">
+            ПОСЛЕ
+          </Heading>
+          <Card className="w-full">
+            <Image src={after} alt={"Our Mission Image After"} />
+          </Card>
+        </div>
       </div>
-      <div
-        className="w-full md:w-auto flex flex-col justify-center items-center"
-        ref={afterRef}
-      >
-        <Heading type="h2" className="mb-4">
-          ПОСЛЕ
-        </Heading>
-        <Card className="w-full md:w-auto">
-          <Image src={after} alt={"Our Mission Image After"}></Image>
-        </Card>
-      </div>
-    </div>
+    </section>
   );
 };
 

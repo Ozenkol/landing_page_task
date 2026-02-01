@@ -33,17 +33,22 @@ const ResultPage = () => {
       );
   }, []);
   return (
-    <Card className="m-16 p-12" ref={el}>
-      <Heading type="h2" className="text-center">
-        ИТОГИ
-      </Heading>
-      <Paragraph className="mt-6 text-center">
-        Итог работы с Steppe Coffee: Социальные сети стали отражением жизни
-        кофейни, офлайн-мероприятия начали работать как инструмент привлечения и
-        удержания аудитории, а бренд получил понятную и устойчивую
-        коммуникационную модель, которую можно масштабировать дальше.
-      </Paragraph>
-    </Card>
+    <section className="w-full">
+      <div className="max-w-5xl mx-auto w-full px-3 py-8">
+        <Card className="mx-0 md:mx-8 p-4 md:p-8" ref={el}>
+          <Heading type="h2" className="text-center">
+            ИТОГИ
+          </Heading>
+          <Paragraph className="mt-6 text-center">
+            Итог работы с Steppe Coffee: Социальные сети стали отражением жизни
+            кофейни, офлайн-мероприятия начали работать как инструмент
+            привлечения и удержания аудитории, а бренд получил понятную и
+            устойчивую коммуникационную модель, которую можно масштабировать
+            дальше.
+          </Paragraph>
+        </Card>
+      </div>
+    </section>
   );
 };
 

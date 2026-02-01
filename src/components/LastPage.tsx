@@ -30,12 +30,16 @@ const LastPage = () => {
       );
   }, []);
   return (
-    <Image
-      src={storePic}
-      alt={"Last Page Image"}
-      className="rounded-[40px] min-w-screen"
-      ref={el}
-    ></Image>
+    <section className="w-full">
+      <div className="max-w-7xl mx-auto w-full px-3 py-8">
+        <Image
+          src={storePic}
+          alt={"Last Page Image"}
+          className="rounded-[40px] w-full h-auto"
+          ref={el}
+        />
+      </div>
+    </section>
   );
 };
 

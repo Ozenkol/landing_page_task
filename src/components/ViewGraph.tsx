@@ -68,39 +68,59 @@ const CircularProgress = ({
 };
 
 // ViewsGraph Component with Circular Graph
-const ViewsGraph = () => {
-  const subscriberPercentage = 44.2;
-  const nonSubscriberPercentage = 55.8;
-  const totalViews = "35,647";
-  const reachedAccounts = "2,190";
+interface ViewsGraphProps {
+  subscriberPercentage?: number;
+  nonSubscriberPercentage?: number;
+  totalViews?: string;
+  reachedAccounts?: string;
+  dateRange?: string;
+  reachedAccountsChange?: string;
+  reachedAccountsChangePercent?: string;
+  cardClassName?: string;
+  headingClassName?: string;
+  paragraphClassName?: string;
+  circularProgressSize?: number;
+  circularProgressStrokeWidth?: number;
+}
 
+const ViewsGraph = ({
+  subscriberPercentage = 44.2,
+  nonSubscriberPercentage = 55.8,
+  totalViews = "35,647",
+  reachedAccounts = "2,190",
+  dateRange = "1 сен - 30 сен",
+  reachedAccountsChangePercent = "-65.5%",
+  cardClassName = "rounded-[40px] p-6",
+  headingClassName = "text-gray-600",
+  paragraphClassName = "text-black",
+  circularProgressSize = 240,
+  circularProgressStrokeWidth = 18,
+}: ViewsGraphProps) => {
   return (
-    <Card className="">
+    <Card className={cardClassName}>
       <div className="space-y-6 flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-          <Heading type="h4" className="text-black">
+          <Heading type="h4" className={headingClassName}>
             ПРОСМОТРЫ
           </Heading>
         </div>
 
         {/* Circular Graph Section */}
         <div className="flex flex-col items-center">
-          <Paragraph className="text-sm text-black mb-4">
-            1 сен - 30 сен
-          </Paragraph>
+          <Paragraph className="text-sm text-black mb-4">{dateRange}</Paragraph>
 
-          <div className="relative mb-6 flex flex-row">
+          <div className="relative mb-6 flex flex-row items-center gap-6">
             {/* Combined Donut Chart */}
-            <div className="relative mr-10">
+            <div className="relative">
               {/* Non-subscribers circle (larger, background) */}
               <CircularProgress
                 percentage={100}
                 color="non-subscribers"
-                size={180}
-                strokeWidth={18}
-                gradientFrom="#374151"
-                gradientTo="#374151"
+                size={circularProgressSize}
+                strokeWidth={circularProgressStrokeWidth}
+                gradientFrom="#E2C5BB"
+                gradientTo="#E2C5BB"
               />
 
               {/* Subscribers circle (on top) */}
@@ -108,19 +128,19 @@ const ViewsGraph = () => {
                 <CircularProgress
                   percentage={subscriberPercentage}
                   color="subscribers"
-                  size={180}
-                  strokeWidth={18}
-                  gradientFrom="#4ECDC4"
-                  gradientTo="#6DE7DE"
+                  size={circularProgressSize}
+                  strokeWidth={circularProgressStrokeWidth}
+                  gradientFrom="#FF9297"
+                  gradientTo="#FF775F"
                 />
               </div>
 
               {/* Center Content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <div className="text-center">
-                  <Paragraph className="text-4xl font-bold">
+                  <Heading type="h4" className="text-4xl font-bold">
                     {totalViews}
-                  </Paragraph>
+                  </Heading>
                   <Paragraph className="text-sm mt-1">Просмотров</Paragraph>
                 </div>
               </div>
@@ -128,21 +148,25 @@ const ViewsGraph = () => {
             {/* Legend */}
             <div className="flex flex-col">
               <div className="flex flex-row items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-linear-to-r from-[#4ECDC4] to-[#6DE7DE]"></div>
+                <div className="w-4 h-4 rounded-full bg-linear-to-r from-[#E2C5BB] to-[#E2C5BB]"></div>
                 <div className="flex flex-col">
-                  <Paragraph className="text-black font-medium">
+                  <Paragraph className={`${paragraphClassName} font-medium`}>
                     {subscriberPercentage}%
                   </Paragraph>
-                  <Paragraph className="text-black">Подписчики</Paragraph>
+                  <Paragraph className={paragraphClassName}>
+                    Подписчики
+                  </Paragraph>
                 </div>
               </div>
               <div className="flex flex-row items-center gap-2">
                 <div className="w-4 h-4 rounded-full bg-linear-to-r from-[#FF6B6B] to-[#FF8E8E]"></div>
                 <div className="flex flex-col">
-                  <Paragraph className="text-black font-medium">
+                  <Paragraph className={`${paragraphClassName} font-medium`}>
                     {nonSubscriberPercentage}%
                   </Paragraph>
-                  <Paragraph className="text-black">Неподписчики</Paragraph>
+                  <Paragraph className={paragraphClassName}>
+                    Неподписчики
+                  </Paragraph>
                 </div>
               </div>
             </div>
@@ -152,13 +176,17 @@ const ViewsGraph = () => {
         {/* Reached Accounts */}
         <div className="pt-4 flex-row justify-between w-full">
           <div className="flex items-center justify-between">
-            <Paragraph className="text-black">Охваченные аккаунты</Paragraph>
-            <div className="flex flex-col items-center gap-2">
+            <Paragraph className={paragraphClassName}>
+              Охваченные аккаунты
+            </Paragraph>
+            <div className="flex flex-col items-center gap-1">
               <Paragraph className="text-xl font-bold text-black">
                 {reachedAccounts}
               </Paragraph>
-              <div className="flex items-center text-black">
-                <Paragraph className="text-sm font-medium">65.5%</Paragraph>
+              <div className="flex items-center text-gray-600">
+                <Paragraph className="text-sm font-medium">
+                  {reachedAccountsChangePercent}
+                </Paragraph>
               </div>
             </div>
           </div>
