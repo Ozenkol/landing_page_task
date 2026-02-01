@@ -3,10 +3,14 @@ import Image from "@/ui/Image";
 import firstPic from "@/assets/images/first.jpg";
 import secondPic from "@/assets/images/second.png";
 import Card from "@/ui/Card";
+import { useRef } from "react";
+import useScrollable from "@/hooks/useScrollable";
 
 const GalleryWidget = () => {
+  const el = useRef(null);
+  useScrollable(el);
   return (
-    <section className="w-full">
+    <section className="w-full" ref={el}>
       <div className="max-w-7xl mx-auto w-full px-3 py-6">
         <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-5 gap-6">
           <div className="row-span-5">

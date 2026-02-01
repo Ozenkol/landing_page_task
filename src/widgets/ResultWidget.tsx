@@ -5,35 +5,15 @@ import Card from "@/ui/Card";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useScrollable from "@/hooks/useScrollable";
 gsap.registerPlugin(ScrollTrigger);
 
-const ResultPage = () => {
+const ResultWidget = () => {
   const el = useRef(null);
 
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          start: "top 80%",
-          trigger: el.current,
-        },
-      })
-      .fromTo(
-        el.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      );
-  }, []);
+  useScrollable(el);
   return (
-    <section className="w-full">
+    <section className="w-full" ref={el}>
       <div className="max-w-5xl mx-auto w-full px-3 py-8">
         <Card className="mx-0 md:mx-8 p-4 md:p-8" ref={el}>
           <Heading type="h2" className="text-center">
@@ -52,4 +32,4 @@ const ResultPage = () => {
   );
 };
 
-export default ResultPage;
+export default ResultWidget;

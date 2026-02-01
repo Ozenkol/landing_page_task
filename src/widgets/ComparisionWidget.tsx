@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ThirdPage = () => {
+const ComparisonWidget = () => {
   const beforeRef = useRef(null);
   const afterRef = useRef(null);
 
@@ -78,4 +78,4 @@ const ThirdPage = () => {
   );
 };
 
-export default ThirdPage;
+export default ComparisonWidget;

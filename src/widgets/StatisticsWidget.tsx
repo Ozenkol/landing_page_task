@@ -9,35 +9,12 @@ import sangwanimation from "@/assets/videos/sangwanimation3.mp4";
 import phone from "@/assets/images/phone.png";
 import VideoOverlay from "@/feature/VideoOverlay";
 import Heading from "@/ui/Heading";
+import useScrollable from "@/hooks/useScrollable";
 gsap.registerPlugin(ScrollTrigger);
 
 const StatisticsWidget = () => {
   const el = useRef(null);
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          start: "top center",
-          trigger: el.current,
-        },
-      })
-      .fromTo(
-        el.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el.current,
-          },
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      );
-  });
+  useScrollable(el);
   return (
     <section className="w-full" ref={el}>
       <div className="max-w-7xl mx-auto w-full px-3 py-8">

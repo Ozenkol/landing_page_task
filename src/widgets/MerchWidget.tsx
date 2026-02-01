@@ -2,54 +2,13 @@ import signPic from "@/assets/images/sign.png";
 import bagPic from "@/assets/images/bag.png";
 import Image from "@/ui/Image";
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import useScrollable from "@/hooks/useScrollable";
 
-const SixthPage = () => {
+const MerchWidget = () => {
   const firstPic = useRef(null);
   const secondPic = useRef(null);
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          start: "top top",
-          trigger: firstPic.current,
-        },
-      })
-      .fromTo(
-        firstPic.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: firstPic.current,
-          },
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      )
-      .fromTo(
-        secondPic.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: secondPic.current,
-          },
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      );
-  }, []);
+  useScrollable(firstPic);
+  useScrollable(secondPic);
   return (
     <section className="w-full">
       <div className="max-w-screen mx-0 w-full px-0 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -71,4 +30,4 @@ const SixthPage = () => {
   );
 };
 
-export default SixthPage;
+export default MerchWidget;

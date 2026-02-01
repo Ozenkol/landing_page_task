@@ -3,34 +3,11 @@ import Image from "@/ui/Image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useScrollable from "@/hooks/useScrollable";
 gsap.registerPlugin(ScrollTrigger);
-const FifthPage = () => {
+const HeroImageWidget = () => {
   const el = useRef(null);
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          start: "top center",
-          trigger: el.current,
-        },
-      })
-      .fromTo(
-        el.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el.current,
-          },
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      );
-  });
+  useScrollable(el);
   return (
     <section className="w-full">
       <div ref={el} className="max-w-screen mx-0 w-full">
@@ -44,4 +21,4 @@ const FifthPage = () => {
   );
 };
 
-export default FifthPage;
+export default HeroImageWidget;

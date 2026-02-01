@@ -11,7 +11,7 @@ import { useEffect, useRef } from "react";
 import VideoOverlay from "@/feature/VideoOverlay";
 import sampleVideo from "@/assets/videos/syrupfinn2.mp4";
 
-const FouthPage = () => {
+const BenefitWidget = () => {
   const el = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
 
@@ -78,4 +78,4 @@ const FouthPage = () => {
   );
 };
 
-export default FouthPage;
+export default BenefitWidget;

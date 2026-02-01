@@ -7,38 +7,15 @@ import Card from "@/ui/Card";
 import videoUrl from "@/assets/videos/IMG_6657.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useScrollable from "@/hooks/useScrollable";
 gsap.registerPlugin(ScrollTrigger);
-const SecondPage = () => {
+const HeadlineWidget = () => {
   const el = useRef(null);
-
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: el.current,
-        },
-      })
-      .fromTo(
-        el.current,
-        {
-          duration: 1.5,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el.current,
-          },
-        },
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-          duration: 1.5,
-        },
-      );
-  });
+  useScrollable(el);
   return (
-    <section className="w-full">
+    <section className="w-full" ref={el}>
       <div className="max-w-7xl mx-auto w-full px-3 py-8 md:py-14 flex flex-col md:flex-row items-center gap-8">
-        <Card ref={el} className="w-full md:w-1/2">
+        <Card className="w-full md:w-1/2">
           <Heading type="h4" className="mb-2 mt-4">
             STEPPE COFFEE
           </Heading>
@@ -60,4 +37,4 @@ const SecondPage = () => {
   );
 };
 
-export default SecondPage;
+export default HeadlineWidget;
