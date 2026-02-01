@@ -36,8 +36,8 @@ const SecondPage = () => {
       );
   });
   return (
-    <div className="flex flex-row items-center justify-between min-h-screen p-16">
-      <Card ref={el} className="mr-24">
+    <div className="flex flex-col md:flex-row items-center justify-between min-h-screen p-6 md:p-16 gap-8">
+      <Card ref={el} className="mr-0 md:mr-24 w-full md:w-auto">
         <Heading type="h4" className="mb-2 mt-4">
           STEPPE COFFEE
         </Heading>
@@ -50,7 +50,10 @@ const SecondPage = () => {
           выглядеть цельно и узнаваемо во всех точках контакта с аудиторией.
         </Paragraph>
       </Card>
-      <VideoPlayer src={videoUrl} className="rounded-[40px]" />
+      <VideoPlayer
+        src={videoUrl}
+        className="rounded-[20px] w-full md:w-[640px]"
+      />
     </div>
   );
 };

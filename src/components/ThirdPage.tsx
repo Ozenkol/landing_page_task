@@ -49,23 +49,26 @@ const ThirdPage = () => {
       );
   }, []);
   return (
-    <div className="flex flex-row items-center justify-center min-h-screen mx-auto gap-20 px-16">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen mx-auto gap-8 md:gap-20 px-6 md:px-16">
       <div
-        className="flex flex-col justify-center items-center"
+        className="w-full md:w-auto flex flex-col justify-center items-center"
         ref={beforeRef}
       >
         <Heading type="h2" className="mb-4">
           ДО
         </Heading>
-        <Card>
+        <Card className="w-full md:w-auto">
           <Image src={before} alt={"Our Mission Image"}></Image>
         </Card>
       </div>
-      <div className="flex flex-col justify-center items-center" ref={afterRef}>
+      <div
+        className="w-full md:w-auto flex flex-col justify-center items-center"
+        ref={afterRef}
+      >
         <Heading type="h2" className="mb-4">
           ПОСЛЕ
         </Heading>
-        <Card>
+        <Card className="w-full md:w-auto">
           <Image src={after} alt={"Our Mission Image After"}></Image>
         </Card>
       </div>

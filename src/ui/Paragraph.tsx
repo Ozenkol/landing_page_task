@@ -11,7 +11,7 @@ export default function Paragraph({
 }: ParagraphProps) {
   return (
     <p
-      className={`font-gothic60 text-gothic60 text-gray-800 text-[20px] ${className}`}
+      className={`font-ginger text-gray-800 text-base md:text-lg ${className}`}
     >
       {children}
     </p>

@@ -51,17 +51,17 @@ const SixthPage = () => {
       );
   }, []);
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-12">
       <Image
         src={bagPic}
-        className="w-[800px] h-[800px] rounded-[40px]"
+        className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
         alt="Sixth Page Bag"
         ref={firstPic}
       />
 
       <Image
         src={signPic}
-        className="w-[800px] h-[800px] rounded-[40px]"
+        className="w-full md:w-1/2 max-h-[80vh] rounded-[20px] object-cover"
         alt="Sixth Page Foreground"
         ref={secondPic}
       />

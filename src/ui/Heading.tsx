@@ -8,7 +8,7 @@ const Heading = ({ children, type = "h4", className = "" }: HeadingProps) => {
   if (type === "h2") {
     return (
       <h2
-        className={`text-[64px] font-normal text-[#393939] font-gothic60 ${className}`}
+        className={`text-3xl md:text-5xl lg:text-[64px] font-normal text-[#393939] font-gothic ${className}`}
       >
         {children}
       </h2>
@@ -16,7 +16,7 @@ const Heading = ({ children, type = "h4", className = "" }: HeadingProps) => {
   }
   return (
     <h4
-      className={`text-[40px] font-normal text-[#393939] font-gothic60 ${className}`}
+      className={`text-2xl md:text-4xl lg:text-[40px] font-normal text-[#393939] font-gothic ${className}`}
     >
       {children}
     </h4>

@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header";
 import FirstPage from "./components/FirstPage";
 import GradientBackground from "./components/GradientBackground";
@@ -10,6 +9,9 @@ import FifthPage from "./components/FifthPage";
 import SixthPage from "./components/SixthPage";
 import LastPage from "./components/LastPage";
 import ResultPage from "./components/ResultPage";
+import StatisticsWidget from "./components/StatisticsWidget";
+import GalleryWidget from "./components/GalleryWidget";
+import CommunityWidget from "./components/CommunityWidget";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <FouthPage />
         <FifthPage />
         <SixthPage />
+        <StatisticsWidget />
+        <CommunityWidget />
+        <GalleryWidget />
         <ResultPage />
         <LastPage />
       </GradientBackground>
