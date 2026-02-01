@@ -1,6 +1,6 @@
 import Heading from "../ui/Heading";
 import Paragraph from "../ui/Paragraph";
-import Card from "./Card";
+import Card from "../ui/Card";
 
 // Circular Progress Component
 interface CircularProgressProps {

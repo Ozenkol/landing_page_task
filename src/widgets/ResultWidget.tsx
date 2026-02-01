@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
-import Card from "./Card";
+import Heading from "@/ui/Heading";
+import Paragraph from "@/ui/Paragraph";
+import Card from "@/ui/Card";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

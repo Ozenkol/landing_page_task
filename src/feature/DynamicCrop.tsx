@@ -1,7 +1,7 @@
 // DynamicCrop.jsx - SIMPLE VERSION
-import Image from "../ui/Image";
-import phoneWithHand from "@/assets/phone_with_hand.png";
-import VideoPlayer from "../ui/VideoPlayer";
+import Image from "@/ui/Image";
+import phoneWithHand from "@/assets/images/phone_with_hand.png";
+import VideoPlayer from "@/ui/VideoPlayer";
 
 type ScreenRect = {
   left: number; // percent (0-100)

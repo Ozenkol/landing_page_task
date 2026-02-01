@@ -7,7 +7,7 @@ interface GradientBackgroundProps {
 }
 
 // Default gradient background image
-import defaultGradientImage from "../assets/gradient_background.png";
+import defaultGradientImage from "@/assets/images/gradient_background.png";
 
 export default function GradientBackground({
   children,

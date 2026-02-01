@@ -1,35 +1,33 @@
-import Header from "./components/Header";
-import FirstPage from "./components/FirstPage";
-import GradientBackground from "./components/GradientBackground";
-import SecondPage from "./components/SecondPage";
-import Footer from "./components/Footer";
-import ThirdPage from "./components/ThirdPage";
-import FouthPage from "./components/FouthPage";
-import FifthPage from "./components/FifthPage";
-import SixthPage from "./components/SixthPage";
-import LastPage from "./components/LastPage";
-import ResultPage from "./components/ResultPage";
-import StatisticsWidget from "./components/StatisticsWidget";
-import GalleryWidget from "./components/GalleryWidget";
-import CommunityWidget from "./components/CommunityWidget";
+import Header from "@/widgets/Header";
+import Footer from "@/widgets/Footer";
+import GradientBackground from "@/widgets/GradientBackground";
+import LastSectionWidget from "@/widgets/LastSectionWidget";
+import ResultWidget from "@/widgets/ResultWidget";
+import HeadlineWidget from "@/widgets/HeadlineWidget";
+import BenefitWidget from "@/widgets/BenefitWidget";
+import HeroImageWidget from "@/widgets/HeroImageWidget";
+import MerchWidget from "@/widgets/MerchWidget";
+import StatisticsWidget from "@/widgets/StatisticsWidget";
+import CommunityWidget from "@/widgets/CommunityWidget";
+import GalleryWidget from "@/widgets/GalleryWidget";
+import HeroWidget from "./widgets/HeroWidget";
 
 function App() {
   return (
     <>
-      <FirstPage>
+      <HeroWidget>
         <Header />
-      </FirstPage>
+      </HeroWidget>
       <GradientBackground>
-        <SecondPage />
-        <ThirdPage />
-        <FouthPage />
-        <FifthPage />
-        <SixthPage />
+        <HeadlineWidget />
+        <BenefitWidget />
+        <HeroImageWidget />
+        <MerchWidget />
         <StatisticsWidget />
         <CommunityWidget />
         <GalleryWidget />
-        <ResultPage />
-        <LastPage />
+        <ResultWidget />
+        <LastSectionWidget />
       </GradientBackground>
       <Footer />
     </>

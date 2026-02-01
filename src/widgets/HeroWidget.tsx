@@ -2,13 +2,14 @@ import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import steppeCoffeeImage from "../assets/steppecoffe.png";
+import steppeCoffeeImage from "@/assets/images/steppecoffe.png";
+import Image from "@/ui/Image";
 
-interface FirstPageProps {
+interface HeroWidgetProps {
   children?: React.ReactNode;
 }
 
-export default function FirstPage({ children }: FirstPageProps) {
+export default function HeroWidget({ children }: HeroWidgetProps) {
   const el = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function FirstPage({ children }: FirstPageProps) {
     <section className="relative w-full min-h-screen bg-[#FAF100] flex flex-col rounded-b-[48px]">
       <div className="max-w-screen mx-0 px-3 py-1 md:py-3">{children}</div>
       <div className="flex-1 flex items-center justify-center px-3 py-6">
-        <img
+        <Image
           ref={el}
           src={steppeCoffeeImage}
           alt="Steppe Coffee"

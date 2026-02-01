@@ -1,8 +1,8 @@
-import Image from "../ui/Image";
+import Image from "@/ui/Image";
 
-import firstPic from "@assets/first.jpg";
-import secondPic from "@assets/second.png";
-import Card from "./Card";
+import firstPic from "@/assets/images/first.jpg";
+import secondPic from "@/assets/images/second.png";
+import Card from "@/ui/Card";
 
 const GalleryWidget = () => {
   return (

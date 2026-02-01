@@ -1,6 +1,6 @@
-import Heading from "../ui/Heading";
-import Card from "./Card";
-import Image from "../ui/Image";
+import Heading from "@/ui/Heading";
+import Card from "@/ui/Card";
+import Image from "@/ui/Image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import before from "@assets/before.png";

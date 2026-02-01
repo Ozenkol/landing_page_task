@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
-import VideoPlayer from "../ui/VideoPlayer";
-import Card from "./Card";
+import Heading from "@/ui/Heading";
+import Paragraph from "@/ui/Paragraph";
+import VideoPlayer from "@/ui/VideoPlayer";
+import Card from "@/ui/Card";
 
-import videoUrl from "@assets/IMG_6657.mp4";
+import videoUrl from "@/assets/videos/IMG_6657.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

@@ -1,14 +1,14 @@
-import Paragraph from "../ui/Paragraph";
-import Card from "./Card";
-import ViewsGraph from "./ViewGraph";
+import Paragraph from "@/ui/Paragraph";
+import Card from "@/ui/Card";
+import ViewsGraph from "@/feature/ViewGraph";
 import { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import sangwanimation from "@assets/sangwanimation3.mp4";
-import phone from "@assets/phone.png";
-import VideoOverlay from "../feature/VideoOverlay";
-import Heading from "../ui/Heading";
+import sangwanimation from "@/assets/videos/sangwanimation3.mp4";
+import phone from "@/assets/images/phone.png";
+import VideoOverlay from "@/feature/VideoOverlay";
+import Heading from "@/ui/Heading";
 gsap.registerPlugin(ScrollTrigger);
 
 const StatisticsWidget = () => {

@@ -1,9 +1,9 @@
-import Image from "../ui/Image";
+import Image from "@/ui/Image";
 
-import afisha from "@assets/afisha.png";
-import desert from "@assets/desert.png";
-import Card from "./Card";
-import Paragraph from "../ui/Paragraph";
+import afisha from "@/assets/images/afisha.png";
+import desert from "@/assets/images/desert.png";
+import Card from "@/ui/Card";
+import Paragraph from "@/ui/Paragraph";
 import { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";

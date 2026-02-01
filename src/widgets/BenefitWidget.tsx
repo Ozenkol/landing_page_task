@@ -1,15 +1,15 @@
-import Image from "../ui/Image";
+import Image from "@/ui/Image";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Paragraph from "../ui/Paragraph";
-import Card from "./Card";
+import Paragraph from "@/ui/Paragraph";
+import Card from "@/ui/Card";
 
-import livingRoom from "@assets/livingroom.png";
+import livingRoom from "@/assets/images/livingroom.png";
 import { useEffect, useRef } from "react";
-import VideoOverlay from "../feature/VideoOverlay";
-import sampleVideo from "@assets/syrupfinn2.mp4";
+import VideoOverlay from "@/feature/VideoOverlay";
+import sampleVideo from "@/assets/videos/syrupfinn2.mp4";
 
 const FouthPage = () => {
   const el = useRef(null);

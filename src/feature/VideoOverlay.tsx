@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import Image from "../ui/Image";
-import phoneWithHand from "@/assets/phone_with_hand.png";
+import Image from "@/ui/Image";
+import phoneWithHand from "@/assets/images/phone_with_hand.png";
 
 type ScreenRect = {
   left: number; // percent

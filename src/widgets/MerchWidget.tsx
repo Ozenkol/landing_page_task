@@ -1,6 +1,6 @@
-import signPic from "@/assets/sign.png";
-import bagPic from "@/assets/bag.png";
-import Image from "../ui/Image";
+import signPic from "@/assets/images/sign.png";
+import bagPic from "@/assets/images/bag.png";
+import Image from "@/ui/Image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

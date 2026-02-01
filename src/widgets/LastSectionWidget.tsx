@@ -1,16 +1,17 @@
-import vines from "@/assets/vines.png";
-import Image from "../ui/Image";
-import { useEffect, useRef } from "react";
+import storePic from "@/assets/images/store.png";
+import Image from "@/ui/Image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
-const FifthPage = () => {
+
+const LastPage = () => {
   const el = useRef(null);
   useEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
-          start: "top center",
+          start: "top 80%",
           trigger: el.current,
         },
       })
@@ -20,9 +21,6 @@ const FifthPage = () => {
           duration: 1.5,
           opacity: 0,
           ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el.current,
-          },
         },
         {
           opacity: 1,
@@ -30,18 +28,19 @@ const FifthPage = () => {
           duration: 1.5,
         },
       );
-  });
+  }, []);
   return (
     <section className="w-full">
-      <div ref={el} className="max-w-screen mx-0 w-full">
+      <div className="max-w-screen mx-auto w-full p-0">
         <Image
-          src={vines}
-          alt={"Vines Image"}
-          className="rounded-[40px] w-full h-auto max-w-full"
+          src={storePic}
+          alt={"Last Page Image"}
+          className="rounded-[40px] w-full h-auto"
+          ref={el}
         />
       </div>
     </section>
   );
 };
 
-export default FifthPage;
+export default LastPage;

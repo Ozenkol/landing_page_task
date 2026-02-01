@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: Ginger;
-  src: url("@assets/fonts/F37GingerCyrillic-VF.ttf");
+  src: url("@/assets/fonts/F37GingerCyrillic-VF.ttf");
 }
 
 @font-face {
   font-family: Gothic;
-  src: url("@assets/fonts/Gothic60-Regular.otf");
+  src: url("@/assets/fonts/Gothic60-Regular.otf");
 }
 
 @theme {
