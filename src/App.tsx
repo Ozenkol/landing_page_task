@@ -10,7 +10,7 @@ import MerchWidget from "@/widgets/MerchWidget";
 import StatisticsWidget from "@/widgets/StatisticsWidget";
 import CommunityWidget from "@/widgets/CommunityWidget";
 import GalleryWidget from "@/widgets/GalleryWidget";
-import HeroWidget from "./widgets/HeroWidget";
+import HeroWidget from "@/widgets/HeroWidget";
 
 function App() {
   return (
@@ -18,7 +18,16 @@ function App() {
       <HeroWidget>
         <Header />
       </HeroWidget>
-      <GradientBackground>
+      <GradientBackground
+        rotationDeg={180}
+        scale={1}
+        objectFit="cover"
+        offsetX="0%"
+        offsetY="0%"
+        filter="brightness(0.7)"
+        imgWidth="120%"
+        imgHeight="120%"
+      >
         <HeadlineWidget />
         <BenefitWidget />
         <HeroImageWidget />
